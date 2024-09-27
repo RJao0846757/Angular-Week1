@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './game-list-item.component.scss'
 })
 export class GameListItemComponent {
-  @Input() gameTitle?: String;
+  @Input() gameData?: any;
 }
