@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { Game } from '../models/game';
 
 @Component({
   selector: 'app-game-list-item',
