@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { GameListItemComponent } from "../game-list-item/game-list-item.component";
 import { CommonModule } from '@angular/common';
+import { GameService } from '../services/game.service';
 
 @Component({
   selector: 'app-game-list',
@@ -9,6 +10,15 @@ import { CommonModule } from '@angular/common';
   templateUrl: './game-list.component.html',
   styleUrl: './game-list.component.scss'
 })
-export class GameListComponent {
+export class GameListComponent implements OnInit {
+  constructor(private gameService: GameService) {}
+  gameArray: String[] = [];
 
+  ngOnInit() {
+    this.gameService.getGameArray().subscribe({
+      next: (data: String[]) => this.gameArray = data,
+      error:err => console.error("Error Ocurred: ", err),
+      complete:() => console.log("fetch complete.")
+    })
+  }
 }
