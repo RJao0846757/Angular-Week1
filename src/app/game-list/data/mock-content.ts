@@ -1,8 +1,10 @@
-export const gameArray: String[] = [
-  "Among us",
-  "Red Dead Redemption 2",
-  "Ace Combat 7, Skies Unknown",
-  "Not A Real Game"
+import { Game } from "../../models/game"
+
+export const gameArray: Game[] = [
+  { id: 1, name: "Among Us", price: 6.49, releaseDate: "06/15/18", developer: "Innersloth"},
+  { id: 2, name: "Red Dead Redemption 2", price: 79.99, releaseDate: "10/26/18", developer: "Rockstar Games"},
+  { id: 3, name: "Ace Combat 7: Skies Unknown", price: 79.99, releaseDate: "01/18/19", developer: "Bandai Namco Studios", publisher: "Bandai Namco Entertainment"},
+  { id: 4, name: "Not A Real Game", price: 49.99, releaseDate: "01/01/11", developer: "NotReal Games"}
   /*
     gameListObj1 : String = "Among us";
     gameListObj2 : String = "Red Dead Redemption 2";
