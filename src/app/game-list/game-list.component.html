@@ -1,3 +1,5 @@
+<app-game-list-item [gameData]="gameSearch"></app-game-list-item>
+
 <div *ngFor="let gameTitles of gameArray; let i = index" 
 [ngStyle]="{'width': '400px', 'background-color': (i % 2 === 1) ? 'beige' : 'aqua'}">
     <app-game-list-item [gameData]="gameArray[i]"></app-game-list-item>

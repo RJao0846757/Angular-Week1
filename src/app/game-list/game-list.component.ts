@@ -13,9 +13,15 @@ import { Game } from '../models/game';
 })
 export class GameListComponent implements OnInit {
   constructor(private gameService: GameService) {}
+  gameSearch: Game | undefined;
   gameArray: Game[] = [];
 
   ngOnInit() {
+    // Searches game by id and saves to property
+    this.gameService.getGameById(2).subscribe(data => {
+      this.gameSearch = data;
+    })
+
     this.gameService.getGameArray().subscribe({
       next: (data: Game[]) => this.gameArray = data,
       error:err => console.error("Error Ocurred: ", err),
