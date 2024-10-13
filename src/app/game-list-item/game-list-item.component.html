@@ -7,5 +7,8 @@
 </style>
 
 <div>
-    <h3>{{ gameData.name }}</h3>
+  <h3>{{ gameData.name }}</h3>
+  <div *ngIf="gameData?.image">
+    <img ngSrc="{{ gameData.image }}" priority width="100" height="100" alt="image of {{ gameData.name }}">
+  </div>
 </div>

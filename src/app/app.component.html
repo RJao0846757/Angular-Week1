@@ -3,6 +3,15 @@
     <title>Game List</title>
   </head>
   <body>
+    <div class="nav-bar">
+      <nav>
+        <ul>
+          <li><a routerLink="/" routerLinkActive="active">Home</a></li>
+          <li><a routerLink="/modify-list-item">Modify List</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!--
     <header>List of Games:</header>
     <div *ngFor="let game of gameList">
       {{ game.name }}
@@ -22,9 +31,9 @@
         {{ game.publisher }}
       </div>
     </div>
-
-    <app-game-list></app-game-list>
+    -->
+    <div class="app-container">
+      <router-outlet></router-outlet>
+    </div>
   </body>
 </html>
-
-<router-outlet />
