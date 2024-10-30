@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { find, Observable, of } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { gameArray } from '../game-list/data/mock-content';
 import { Game } from '../models/game';
 
