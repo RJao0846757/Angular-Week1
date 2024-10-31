@@ -1,1 +1,34 @@
-<p>Modify List Page</p>
+<form [formGroup]="gameForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="id">ID: </label>
+    <input type="number" id="id" name="id" formControlName="id" />
+  </div>
+  <div>
+    <label for="name">Game Title: </label>
+    <input type="text" id="name" name="name" formControlName="name" />
+  </div>
+
+  <div>
+    <label for="price">Price: </label>
+    <input type="text" id="price" name="price" formControlName="price" />
+  </div>
+
+  <div>
+    <label for="releaseDate">Release Date: </label>
+    <input type="text" id="releaseDate" name="releaseDate" formControlName="releaseDate" />
+  </div>
+
+  <div>
+    <label for="developer">Developer: </label>
+    <input type="text" id="developer" name="developer" formControlName="developer" />
+  </div>
+
+  <div>
+    <label for="publisher">Publisher: </label>
+    <input type="text" id="publisher" name="publisher" formControlName="publisher">
+  </div>
+
+  <button type="submit">Submit</button>
+
+  <button type="button" (click)="onDelete()">Delete</button>
+</form>

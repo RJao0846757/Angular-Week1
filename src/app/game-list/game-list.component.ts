@@ -12,7 +12,9 @@ import { Game } from '../models/game';
   styleUrl: './game-list.component.scss'
 })
 export class GameListComponent implements OnInit {
-  constructor(private gameService: GameService) {}
+  constructor(
+    private gameService: GameService,
+  ) {}
   gameSearch: Game | undefined;
   gameArray: Game[] = [];
 
