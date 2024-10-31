@@ -42,7 +42,7 @@ export class ModifyListItemComponent {
       this.gameService.updateGame(game);
     } else {
       // Adds new game
-      game.id = gameArray.length;
+      game.id = (gameArray.length + 1);
       this.gameService.addGame(game);
     }
 
