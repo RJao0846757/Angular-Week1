@@ -11,8 +11,7 @@
   <div>
     <p>{{ gameData.price | currency }}</p>
     <p>{{ gameData.releaseDate | date:"longDate" }}</p>
-    <p>{{ gameData.developer }}</p>
-    <p *ngIf="gameData?.publisher">{{ gameData.publisher }}</p>
+    <p>{{ gameData | developerPublisher }}</p>
   </div>
   <div *ngIf="gameData?.image">
     <img ngSrc="{{ gameData.image }}" priority width="100" height="100" alt="image of {{ gameData.name }}">
