@@ -4,13 +4,15 @@ import {GameService} from "../services/game.service";
 import {Game} from "../models/game";
 import {gameArray} from "../game-list/data/mock-content";
 import {Router} from "@angular/router";
+import {HighlightOnFocusDirective} from "../directives/highlight-on-focus.directive";
 
 @Component({
   selector: 'app-modify-list-item',
   standalone: true,
   imports: [
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HighlightOnFocusDirective
   ],
   templateUrl: './modify-list-item.component.html',
   styleUrl: './modify-list-item.component.scss'
