@@ -1,41 +1,47 @@
 <form [formGroup]="gameForm" (ngSubmit)="onSubmit()">
   <mat-form-field>
     <label for="id">ID: </label>
-    <input type="number" id="id" name="id" formControlName="id" [appHighlightOnFocus]="'lightyellow'" required/>
+    <input type="number" id="id" name="id" formControlName="id" [appHighlightOnFocus]="'lightyellow'" required
+    matTooltip="If editing a game, enter its ID here."/>
   </mat-form-field>
   <br>
 
   <mat-form-field>
     <label for="name">Game Title: </label>
-    <input type="text" id="name" name="name" formControlName="name" [appHighlightOnFocus]="'lightyellow'" required/>
+    <input type="text" id="name" name="name" formControlName="name" [appHighlightOnFocus]="'lightyellow'" required
+    matTooltip="Enter the game's name here."/>
   </mat-form-field>
   <br>
 
   <mat-form-field>
     <label for="price">Price: </label>
-    <input type="text" id="price" name="price" formControlName="price" [appHighlightOnFocus]="'lightyellow'" required/>
+    <input type="text" id="price" name="price" formControlName="price" [appHighlightOnFocus]="'lightyellow'" required
+    matTooltip="Enter the game's price here."/>
   </mat-form-field>
   <br>
 
   <mat-form-field>
     <label for="releaseDate">Release Date: </label>
-    <input type="text" id="releaseDate" name="releaseDate" formControlName="releaseDate" [appHighlightOnFocus]="'lightyellow'" required/>
+    <input type="text" id="releaseDate" name="releaseDate" formControlName="releaseDate" [appHighlightOnFocus]="'lightyellow'" required
+    matTooltip="Enter the game's release date here."/>
   </mat-form-field>
   <br>
 
   <mat-form-field>
     <label for="developer">Developer: </label>
-    <input type="text" id="developer" name="developer" formControlName="developer" [appHighlightOnFocus]="'lightyellow'" required/>
+    <input type="text" id="developer" name="developer" formControlName="developer" [appHighlightOnFocus]="'lightyellow'" required
+    matTooltip="Enter the game's developer here."/>
   </mat-form-field>
   <br>
 
   <mat-form-field>
     <label for="publisher">Publisher: </label>
-    <input type="text" id="publisher" name="publisher" formControlName="publisher" [appHighlightOnFocus]="'lightyellow'">
+    <input type="text" id="publisher" name="publisher" formControlName="publisher" [appHighlightOnFocus]="'lightyellow'"
+    matTooltip="Enter the game's publisher here. (Not required)">
   </mat-form-field>
   <br>
 
-  <button mat-raised-button type="submit">Submit</button>
+  <button mat-raised-button type="submit" matTooltip="Add/Update Game">Submit</button>
 
-  <button mat-raised-button type="button" (click)="onDelete()">Delete</button>
+  <button mat-raised-button type="button" matTooltip="Delete Current Game" (click)="onDelete()">Delete</button>
 </form>

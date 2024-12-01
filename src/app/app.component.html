@@ -3,6 +3,7 @@
     <title>Game List</title>
   </head>
   <body>
+    <mat-toolbar>
     <div class="nav-bar">
       <nav>
         <ul>
@@ -11,27 +12,7 @@
         </ul>
       </nav>
     </div>
-    <!--
-    <header>List of Games:</header>
-    <div *ngFor="let game of gameList">
-      {{ game.name }}
-      ${{ game.price }}
-      {{ game.releaseDate }}
-      {{ game.developer }}
-      {{ game.publisher }}
-    </div>
-    <br>
-    <header>List of games under $50:</header>
-    <div *ngFor="let game of gameList">
-      <div *ngIf="game.price<=50">
-        {{ game.name }}
-        ${{ game.price }}
-        {{ game.releaseDate }}
-        {{ game.developer }}
-        {{ game.publisher }}
-      </div>
-    </div>
-    -->
+    </mat-toolbar>
     <div class="app-container">
       <router-outlet></router-outlet>
     </div>
