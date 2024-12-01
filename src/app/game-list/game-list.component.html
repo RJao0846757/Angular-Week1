@@ -1,6 +1,18 @@
-<app-game-list-item [gameData]="gameSearch"></app-game-list-item>
+<mat-card>
+  <mat-card-content>
+    <app-game-list-item [gameData]="gameSearch"></app-game-list-item>
+  </mat-card-content>
+</mat-card>
 
-<div *ngFor="let gameTitles of gameArray; let i = index"
-[ngStyle]="{'width': '400px', 'background-color': (i % 2 === 1) ? 'beige' : 'aqua'}">
-    <app-game-list-item [gameData]="gameArray[i]"></app-game-list-item>
-</div>
+<mat-grid-list cols="2">
+  <div *ngFor="let gameTitles of gameArray; let i = index"
+  [ngStyle]="{'width': '400px', 'background-color': (i % 2 === 1) ? 'beige' : 'aqua'}">
+    <mat-grid-tile>
+      <mat-card appearance="raised">
+        <mat-card-content>
+          <app-game-list-item [gameData]="gameArray[i]"></app-game-list-item>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </div>
+</mat-grid-list>

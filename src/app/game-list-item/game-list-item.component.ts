@@ -4,11 +4,13 @@ import {GameService} from "../services/game.service";
 import {Router} from "@angular/router";
 import {DeveloperPublisherPipe} from "../pipes/developer-publisher.pipe";
 import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
+import {MatListModule} from "@angular/material/list";
+import {MatButtonModule} from "@angular/material/button";
 
 @Component({
   selector: 'app-game-list-item',
   standalone: true,
-  imports: [CommonModule, NgOptimizedImage, DeveloperPublisherPipe, HoverHighlightDirective],
+  imports: [CommonModule, NgOptimizedImage, DeveloperPublisherPipe, HoverHighlightDirective, MatListModule, MatButtonModule],
   templateUrl: './game-list-item.component.html',
   styleUrl: './game-list-item.component.scss'
 })

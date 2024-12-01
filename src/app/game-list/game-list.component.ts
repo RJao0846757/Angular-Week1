@@ -3,11 +3,13 @@ import { GameListItemComponent } from "../game-list-item/game-list-item.componen
 import { CommonModule } from '@angular/common';
 import { GameService } from '../services/game.service';
 import { Game } from '../models/game';
+import {MatCardModule} from "@angular/material/card";
+import {MatGridListModule} from "@angular/material/grid-list";
 
 @Component({
   selector: 'app-game-list',
   standalone: true,
-  imports: [GameListItemComponent, CommonModule],
+  imports: [GameListItemComponent, CommonModule, MatCardModule, MatGridListModule],
   templateUrl: './game-list.component.html',
   styleUrl: './game-list.component.scss'
 })

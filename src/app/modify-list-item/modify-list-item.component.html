@@ -1,34 +1,41 @@
 <form [formGroup]="gameForm" (ngSubmit)="onSubmit()">
-  <div>
+  <mat-form-field>
     <label for="id">ID: </label>
-    <input type="number" id="id" name="id" formControlName="id" [appHighlightOnFocus]="'lightyellow'"/>
-  </div>
-  <div>
+    <input type="number" id="id" name="id" formControlName="id" [appHighlightOnFocus]="'lightyellow'" required/>
+  </mat-form-field>
+  <br>
+
+  <mat-form-field>
     <label for="name">Game Title: </label>
-    <input type="text" id="name" name="name" formControlName="name" [appHighlightOnFocus]="'lightyellow'"/>
-  </div>
+    <input type="text" id="name" name="name" formControlName="name" [appHighlightOnFocus]="'lightyellow'" required/>
+  </mat-form-field>
+  <br>
 
-  <div>
+  <mat-form-field>
     <label for="price">Price: </label>
-    <input type="text" id="price" name="price" formControlName="price" [appHighlightOnFocus]="'lightyellow'"/>
-  </div>
+    <input type="text" id="price" name="price" formControlName="price" [appHighlightOnFocus]="'lightyellow'" required/>
+  </mat-form-field>
+  <br>
 
-  <div>
+  <mat-form-field>
     <label for="releaseDate">Release Date: </label>
-    <input type="text" id="releaseDate" name="releaseDate" formControlName="releaseDate" [appHighlightOnFocus]="'lightyellow'"/>
-  </div>
+    <input type="text" id="releaseDate" name="releaseDate" formControlName="releaseDate" [appHighlightOnFocus]="'lightyellow'" required/>
+  </mat-form-field>
+  <br>
 
-  <div>
+  <mat-form-field>
     <label for="developer">Developer: </label>
-    <input type="text" id="developer" name="developer" formControlName="developer" [appHighlightOnFocus]="'lightyellow'"/>
-  </div>
+    <input type="text" id="developer" name="developer" formControlName="developer" [appHighlightOnFocus]="'lightyellow'" required/>
+  </mat-form-field>
+  <br>
 
-  <div>
+  <mat-form-field>
     <label for="publisher">Publisher: </label>
     <input type="text" id="publisher" name="publisher" formControlName="publisher" [appHighlightOnFocus]="'lightyellow'">
-  </div>
+  </mat-form-field>
+  <br>
 
-  <button type="submit">Submit</button>
+  <button mat-raised-button type="submit">Submit</button>
 
-  <button type="button" (click)="onDelete()">Delete</button>
+  <button mat-raised-button type="button" (click)="onDelete()">Delete</button>
 </form>

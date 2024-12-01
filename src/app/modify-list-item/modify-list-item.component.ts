@@ -5,6 +5,8 @@ import {Game} from "../models/game";
 import {gameArray} from "../game-list/data/mock-content";
 import {Router} from "@angular/router";
 import {HighlightOnFocusDirective} from "../directives/highlight-on-focus.directive";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatButtonModule} from "@angular/material/button";
 
 @Component({
   selector: 'app-modify-list-item',
@@ -12,7 +14,9 @@ import {HighlightOnFocusDirective} from "../directives/highlight-on-focus.direct
   imports: [
     FormsModule,
     ReactiveFormsModule,
-    HighlightOnFocusDirective
+    HighlightOnFocusDirective,
+    MatFormFieldModule,
+    MatButtonModule
   ],
   templateUrl: './modify-list-item.component.html',
   styleUrl: './modify-list-item.component.scss'

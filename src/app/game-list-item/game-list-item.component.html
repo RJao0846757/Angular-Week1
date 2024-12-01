@@ -7,15 +7,19 @@
 </style>
 
 <div [appHoverHighlight]="'lightgrey'">
+  <mat-list>
   <h3>{{ gameData.name | titlecase }}</h3>
   <div>
-    <p>{{ gameData.price | currency }}</p>
-    <p>{{ gameData.releaseDate | date:"longDate" }}</p>
-    <p>{{ gameData | developerPublisher }}</p>
+    <mat-list-item>{{ gameData.price | currency }}</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>{{ gameData.releaseDate | date:"longDate" }}</mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>{{ gameData | developerPublisher }}</mat-list-item>
   </div>
   <div *ngIf="gameData?.image">
     <img ngSrc="{{ gameData.image }}" priority width="100" height="100" alt="image of {{ gameData.name }}">
   </div>
-  <button (click)="updateGame(gameData.id)">Update</button>
-  <button (click)="deleteGame(gameData.id)">Delete</button>
+  <button mat-stroked-button (click)="updateGame(gameData.id)">Update</button>
+  <button mat-stroked-button (click)="deleteGame(gameData.id)">Delete</button>
+  </mat-list>
 </div>
